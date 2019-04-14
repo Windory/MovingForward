@@ -1,0 +1,72 @@
+fileFormatVersion: 2
+guid: 838bf84b843a0984082f16d365d0b653
+ScriptedImporter:
+  fileIDToRecycleName:
+    2800000: Atlas_AssetsEnvironment2_1
+    11400000: _TilesetScriptObject
+    11400002: _superAsset
+    11400004: Tile_AssetsEnvironment2_1
+    11400006: Tile_AssetsEnvironment2_2
+    11400008: Tile_AssetsEnvironment2_3
+    11400010: Tile_AssetsEnvironment2_4
+    11400012: Tile_AssetsEnvironment2_5
+    11400014: Tile_AssetsEnvironment2_6
+    11400016: Tile_AssetsEnvironment2_7
+    11400018: Tile_AssetsEnvironment2_8
+    11400020: Tile_AssetsEnvironment2_9
+    11400022: Tile_AssetsEnvironment2_10
+    11400024: Tile_AssetsEnvironment2_11
+    11400026: Tile_AssetsEnvironment2_12
+    11400028: Tile_AssetsEnvironment2_13
+    11400030: Tile_AssetsEnvironment2_14
+    11400032: Tile_AssetsEnvironment2_15
+    11400034: Tile_AssetsEnvironment2_16
+    11400036: Tile_AssetsEnvironment2_17
+    11400038: Tile_AssetsEnvironment2_18
+    11400040: Tile_AssetsEnvironment2_19
+    11400042: Tile_AssetsEnvironment2_20
+    11400044: Tile_AssetsEnvironment2_21
+    11400046: Tile_AssetsEnvironment2_22
+    11400048: Tile_AssetsEnvironment2_23
+    11400050: Tile_AssetsEnvironment2_24
+    21300000: Sprite_AssetsEnvironment2_1
+    21300002: Sprite_AssetsEnvironment2_2
+    21300004: Sprite_AssetsEnvironment2_3
+    21300006: Sprite_AssetsEnvironment2_4
+    21300008: Sprite_AssetsEnvironment2_5
+    21300010: Sprite_AssetsEnvironment2_6
+    21300012: Sprite_AssetsEnvironment2_7
+    21300014: Sprite_AssetsEnvironment2_8
+    21300016: Sprite_AssetsEnvironment2_9
+    21300018: Sprite_AssetsEnvironment2_10
+    21300020: Sprite_AssetsEnvironment2_11
+    21300022: Sprite_AssetsEnvironment2_12
+    21300024: Sprite_AssetsEnvironment2_13
+    21300026: Sprite_AssetsEnvironment2_14
+    21300028: Sprite_AssetsEnvironment2_15
+    21300030: Sprite_AssetsEnvironment2_16
+    21300032: Sprite_AssetsEnvironment2_17
+    21300034: Sprite_AssetsEnvironment2_18
+    21300036: Sprite_AssetsEnvironment2_19
+    21300038: Sprite_AssetsEnvironment2_20
+    21300040: Sprite_AssetsEnvironment2_21
+    21300042: Sprite_AssetsEnvironment2_22
+    21300044: Sprite_AssetsEnvironment2_23
+    21300046: Sprite_AssetsEnvironment2_24
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors: []
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 51
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
