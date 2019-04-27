@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-    private float h, v = 0.0f;
-    private float jumpCounter = 0.0f;
-    private bool isGrounded = false;
-    private bool isJumping = false;
-
-    private bool canJump = true;
+public class PlayerController : MonoBehaviour
+{
+    /*private float h, v = 0.0f;
 
     private RaycastHit2D[] groundHits = null;
     private Collider2D[] colliders = null;
@@ -23,30 +19,74 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float maxJumpTime = 1.5f;
     [SerializeField]
-    private LayerMask groundLayers;
+    private LayerMask groundLayers;*/
+
+    private List<GameObject> goCharacters = new List<GameObject>(4); // List with all GameObject characters
+    private List<IsometricController> characters = new List<IsometricController>(4); // List with all Controller characters
+    private int cha = 0; // Current index of the characters list (active character)
+    private float h, v = 0.0f;
 
     private void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<PolygonCollider2D>();
+        /*rb2D = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<PolygonCollider2D>();*/
+        string[] tags = { "Velma", "Fred", "Dapne", "Dog" };
+        for (int i = 0; i < 4; ++i)
+        {
+            goCharacters.Add(GameObject.Find(tags[i]));
+            characters.Add(goCharacters[i].GetComponent<IsometricController>());
+        }
+        GameManager.getInstance().CameraFollowObject(goCharacters[cha]);
+        characters[cha].Go();
     }
 
     private void FixedUpdate()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
-
-        rb2D.velocity = new Vector2(h * speed, rb2D.velocity.y);
+        ProcessMove();
     }
 
     private void Update()
     {
-        CheckGrounded();
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+       
         ProcessInteract();
-        ProcessJump();
+        ProcessSwitch();
+    }
+
+    // Switch the current character to the next one in the list
+    private void Switch()
+    {
+        characters[cha].Stop();
+        ++cha;
+        if (cha == characters.Count)
+            cha = 0;
+        GameManager.getInstance().CameraFollowObject(goCharacters[cha]);
+        characters[cha].Go();
+    }
+
+    private void ProcessMove()
+    {
+        characters[cha].Move(h, v);
     }
 
     private void ProcessInteract()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            characters[cha].Interact();
+        }
+    }
+
+    private void ProcessSwitch()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Switch();
+        }
+    }
+
+    /*private void ProcessInteract()
     {
         colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.points[0].x / 2 + 0.025f);
 
@@ -60,8 +100,6 @@ public class PlayerController : MonoBehaviour {
                     {
                         if (Input.GetKeyDown(KeyCode.S))
                         {
-                            canJump = false;
-
                             boulder.IsPushed = true;
                             boulder.GetComponent<FixedJoint2D>().enabled = true;
                             boulder.GetComponent<FixedJoint2D>().connectedBody = rb2D;
@@ -70,8 +108,6 @@ public class PlayerController : MonoBehaviour {
 
                         if (Input.GetKeyUp(KeyCode.S))
                         {
-                            canJump = true;
-
                             boulder.IsPushed = false;
                             boulder.GetComponent<FixedJoint2D>().enabled = false;
                             boulder.GetComponent<FixedJoint2D>().connectedBody = null;
@@ -80,67 +116,5 @@ public class PlayerController : MonoBehaviour {
                     break;
             }
         }
-    }
-
-    private void ProcessJump()
-    {
-
-        if (canJump)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-            {
-                isJumping = true;
-                jumpCounter = maxJumpTime;
-                rb2D.velocity = Vector2.up * jumpForce;
-            }
-
-            if (isJumping && Input.GetKey(KeyCode.Space))
-            {
-                if (jumpCounter > 0)
-                {
-                    rb2D.velocity = Vector2.up * jumpForce;
-                    jumpCounter -= Time.deltaTime;
-                }
-                else
-                {
-                    isJumping = false;
-                }
-            }
-
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                isJumping = false;
-            }
-        }
-    }
-
-    private void CheckGrounded()
-    {
-        groundHits = Physics2D.RaycastAll(transform.position, Vector2.down, boxCollider.points[0].y / 2 + 0.05f, groundLayers);
-
-        if (groundHits.Length != 0)
-        {
-            foreach (RaycastHit2D hit in groundHits)
-            {
-                if (hit.collider.GetInstanceID() == boxCollider.GetInstanceID())
-                {
-                    if (groundHits.Length == 1)
-                    {
-                        isGrounded = false;
-                        break;
-                    }
-                    continue;
-                }
-                if (hit.collider != null)
-                {
-                    isGrounded = true;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            isGrounded = false;
-        }
-    }
+    }*/
 }

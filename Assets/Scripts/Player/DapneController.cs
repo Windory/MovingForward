@@ -5,7 +5,7 @@ using UnityEngine;
 public class DapneController : IsometricController {
 
 
-    private Trap trap;
+    private DangerousTerrain trap;
     protected override bool DetectInteraction()
     {
         bool ret=
@@ -22,8 +22,8 @@ public class DapneController : IsometricController {
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Trap aux;
-        if (aux= other.GetComponent<Trap>())
+        DangerousTerrain aux;
+        if (aux= other.GetComponent<DangerousTerrain>())
             trap = aux;
 
     }
@@ -31,7 +31,7 @@ public class DapneController : IsometricController {
     public void OnTriggerExit2D(Collider2D other)
     {
 
-        if ( other.GetComponent<Trap>())
+        if ( other.GetComponent<DangerousTerrain>())
             trap = null;
 
     }
