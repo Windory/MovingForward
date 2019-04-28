@@ -3,43 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour
+public class Lever : Interactable
 {
 
 
  //   public GameObject FenceObject;
     public Sprite opened;
     public Sprite closed;
+    public List<OpenedClosed> ocList;
 
-    private KeyDoor kd;
+    private bool on;
+        
     // Use this for initialization
     void Start()
     {
-        kd = GetComponent<KeyDoor>();
+        on = false;
         gameObject.GetComponent<SpriteRenderer>().sprite = closed;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    /*
-    public void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.transform.tag == "Fred" || col.transform.tag == "Zwei" || col.transform.tag == "Dog" || col.transform.tag == "Velma")
-        {
-             gameObject.GetComponent<SpriteRenderer>().sprite = opened;
-            FenceObject.gameObject.SetActive(false);
-            gameObject.GetComponent<Collider2D>().enabled = false;
-        }
-    }*/
 
     public void PullLever()
     {
         Debug.Log("leverPulled");
-        kd.Activate = !kd.Activate;
-        if (kd.Activate)
+        on = !on;
+        foreach (OpenedClosed oc in ocList)
+        {
+            oc.StateChange();
+        }
+        if (on)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = opened;
             //FenceObject.gameObject.SetActive(false);
@@ -49,5 +39,10 @@ public class Lever : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = closed;
         }
+    }
+
+    public override void Interact()
+    {
+        PullLever();
     }
 }

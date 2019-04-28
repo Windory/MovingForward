@@ -55,7 +55,7 @@ public abstract class IsometricController : MonoBehaviour
 
     protected virtual bool DetectInteraction()
     {
-        colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 0.05f);
+        colliders = Physics2D.OverlapCircleAll(transform.position, 1000);
         bool ret = false;
         foreach (Collider2D collider in colliders)
         {
@@ -72,8 +72,9 @@ public abstract class IsometricController : MonoBehaviour
         colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 0.05f);
         foreach (Collider2D collider in colliders)
         {
-            Interactable item = collider.GetComponent<Interactable>();
-            item.Interact();
+            Interactable item = collider.GetComponent<Lever>();
+            if (item)
+                item.Interact();
         }
     }
 
