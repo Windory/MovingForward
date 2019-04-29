@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public abstract class Interactable : MonoBehaviour
+public interface Interactable
 {
-    public abstract void Interact();
+    void Interact();
 }

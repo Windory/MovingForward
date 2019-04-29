@@ -5,36 +5,10 @@ using UnityEngine;
 //This script make the boulder static
 public class Boulder : MonoBehaviour {
 
-    //The original x,y position
-    private Vector2 pos = Vector2.zero;
-
-    private bool isPushed = false;
-
-    public bool IsPushed
+    private void Start()
     {
-        get { return isPushed; }
-        set { isPushed = value; }
-    }
-
-    public Vector2 Pos
-    {
-        get { return pos; }
-        set { pos = value; }
-    }
-
-	void Start () {
-        pos = transform.position;
-	}
-
-    private void Update()
-    {
-        if (!isPushed)
-        {
-            transform.position = pos;
-        }
-        else
-        {
-            pos = transform.position;
-        }
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.mass = 1000;
+        rb.drag = 100;
     }
 }

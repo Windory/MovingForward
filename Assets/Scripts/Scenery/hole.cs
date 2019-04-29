@@ -2,12 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class hole : MonoBehaviour
+public class Hole : MonoBehaviour
 {
-    public void OnTriggerEnter2D(Collider2D other)
+    public Sprite spriteEmpty;
+    public Sprite spriteBlocked;
+
+    private SpriteRenderer sd;
+    private bool blocked = false;
+
+    private void Start()
     {
-        CharacterSwapping ic = other.GetComponent<CharacterSwapping>();
-        ic.Kill();
+        sd = GetComponent<SpriteRenderer>();
+        sd.sprite = spriteEmpty;
+    }
+
+    private void Update()
+    {
+        if (!blocked)
+        {
+            Collider2D col = Physics2D.OverlapCircle(transform.position, 0, LayerMask.GetMask("Boulder"));
+            if (col && col.gameObject.tag == "Boulder")
+            {
+                Block(col.gameObject);
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (!blocked && col.gameObject.tag == "Boulder")
+        {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col.collider);
+        }
+    }
+
+    void Block(GameObject go)
+    {
+        blocked = true;
+        sd.sprite = spriteBlocked;
+        GetComponent<Collider2D>().enabled = false;
+        Destroy(go);
     }
 }

@@ -72,8 +72,8 @@ public abstract class IsometricController : MonoBehaviour
         colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 0.05f);
         foreach (Collider2D collider in colliders)
         {
-            Interactable item = collider.GetComponent<Lever>();
-            if (item)
+            Interactable item = collider.GetComponent<Interactable>();
+            if (item != null)
                 item.Interact();
         }
     }
