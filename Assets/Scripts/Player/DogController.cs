@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class DogController : IsometricController {
 
-    private GameObject nearBone;
-    private GameObject myBone;
-    private Vector3 offset;
-    public void Start()
+    private static DogController instance;
+
+    protected override void Awake()
     {
-        Sprite aux;
-        offset= Vector3.zero;
-        aux = this.GetComponent<SpriteRenderer>().sprite;
-        offset.y = aux.textureRect.height / aux.pixelsPerUnit * this.transform.localScale.y/2;
-    }
-    protected override void Update()
-    {
+        base.Awake();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            instance.transform.position = this.gameObject.transform.position;
+            Destroy(this.gameObject);
+        }
     }
 }

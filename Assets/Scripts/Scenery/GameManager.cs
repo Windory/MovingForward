@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 
     public void SetPauseMenu(GameObject gameObject)
     {
-        pauseMenu = gameObject;    
+        pauseMenu = gameObject;
     }
 
     private Transform cameraFollow;
@@ -91,10 +91,6 @@ public class GameManager : MonoBehaviour {
 
     public void Update()
     {
-        if (Input.GetButtonDown("Swap"))
-        {
-            CharacterSwapping.SwapCharacter();
-        }
         if(Input.GetButton("Restart"))
         {
             Restart();
