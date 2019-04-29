@@ -3,36 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DapneController : IsometricController {
+    
+    private static DapneController instance;
 
-
-    private DangerousTerrain trap;
-    protected override bool DetectInteraction()
+    protected override void Awake()
     {
-        bool ret=
-        base.DetectInteraction();
-        if (trap != null)
+        base.Awake();
+        if (instance == null)
         {
-            trap.GetComponent<Collider2D>().enabled = false;
-            trap = null;
-            ret = true;
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-        return ret;
-     
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        DangerousTerrain aux;
-        if (aux= other.GetComponent<DangerousTerrain>())
-            trap = aux;
-
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-
-        if ( other.GetComponent<DangerousTerrain>())
-            trap = null;
-
+        else
+        {
+            instance.transform.position = this.gameObject.transform.position;
+            Destroy(this.gameObject);
+        }
     }
 }

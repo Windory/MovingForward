@@ -1,48 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    /*private float h, v = 0.0f;
-
-    private RaycastHit2D[] groundHits = null;
-    private Collider2D[] colliders = null;
-
-    private Rigidbody2D rb2D = null;
-    private PolygonCollider2D boxCollider = null;
-
-    [SerializeField]
-    private float speed = 5.0f;
-    [SerializeField]
-    private float jumpForce = 5.0f;
-    [SerializeField]
-    private float maxJumpTime = 1.5f;
-    [SerializeField]
-    private LayerMask groundLayers;*/
-
-    private List<GameObject> goCharacters = new List<GameObject>(4); // List with all GameObject characters
-    private List<IsometricController> characters = new List<IsometricController>(4); // List with all Controller characters
+    private List<IsometricController> characters = new List<IsometricController>(4); // List with all characters
+    private List<IsometricController> charactersEnd = new List<IsometricController>(3); // List with the characters who reached the end
     private int cha = 0; // Current index of the characters list (active character)
     private float h, v = 0.0f;
+    private static PlayerController instance;
+    private bool canMove = true;
+
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     private void Start()
     {
-        /*rb2D = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<PolygonCollider2D>();*/
+        GetCharacters();
+    }
+
+    private void GetCharacters()
+    {
         string[] tags = { "Velma", "Fred", "Dapne", "Dog" };
         for (int i = 0; i < 4; ++i)
         {
-            goCharacters.Add(GameObject.Find(tags[i]));
-            characters.Add(goCharacters[i].GetComponent<IsometricController>());
+            characters.Add(GameObject.Find(tags[i]).GetComponent<IsometricController>());
         }
-        GameManager.getInstance().CameraFollowObject(goCharacters[cha]);
+        GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
         characters[cha].Go();
+    }
+
+    public static PlayerController GetInstance()
+    {
+        return instance;
     }
 
     private void FixedUpdate()
     {
-        ProcessMove();
+        if (canMove)
+            ProcessMove();
     }
 
     private void Update()
@@ -52,6 +59,7 @@ public class PlayerController : MonoBehaviour
        
         ProcessInteract();
         ProcessSwitch();
+        ProcessRetry();
     }
 
     // Switch the current character to the next one in the list
@@ -61,8 +69,13 @@ public class PlayerController : MonoBehaviour
         ++cha;
         if (cha == characters.Count)
             cha = 0;
-        GameManager.getInstance().CameraFollowObject(goCharacters[cha]);
+        GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
         characters[cha].Go();
+    }
+
+    private void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void ProcessMove()
@@ -86,35 +99,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*private void ProcessInteract()
+    private void ProcessRetry()
     {
-        colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.points[0].x / 2 + 0.025f);
-
-        foreach (Collider2D collider in colliders)
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            switch (collider.tag)
-            {
-                case "Boulder":
-                    Boulder boulder = collider.GetComponent<Boulder>();
-                    if (boulder != null && isGrounded)
-                    {
-                        if (Input.GetKeyDown(KeyCode.S))
-                        {
-                            boulder.IsPushed = true;
-                            boulder.GetComponent<FixedJoint2D>().enabled = true;
-                            boulder.GetComponent<FixedJoint2D>().connectedBody = rb2D;
-
-                        }
-
-                        if (Input.GetKeyUp(KeyCode.S))
-                        {
-                            boulder.IsPushed = false;
-                            boulder.GetComponent<FixedJoint2D>().enabled = false;
-                            boulder.GetComponent<FixedJoint2D>().connectedBody = null;
-                        }
-                    }
-                    break;
-            }
+            Retry();
         }
-    }*/
+    }
+
+    public void CharacterExit()
+    {
+        canMove = false;
+        characters[cha].Stop();
+        int chaEnd = cha;
+        charactersEnd.Add(characters[chaEnd]);
+        characters[chaEnd].gameObject.SetActive(false);
+        characters.RemoveAt(chaEnd);
+        if (cha == characters.Count)
+            cha = 0;
+
+        if (characters.Count == 1)
+        {
+            characters[0].gameObject.SetActive(false);
+            characters.RemoveAt(0);
+            for (int i = 0; i < charactersEnd.Count; ++i)
+            {
+                characters.Add(charactersEnd[i]);
+                characters[i].gameObject.SetActive(true);
+            }
+            charactersEnd.Clear();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
+        characters[cha].Go();
+        canMove = true;
+    }
 }

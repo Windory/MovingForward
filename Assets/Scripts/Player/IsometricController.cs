@@ -9,9 +9,6 @@ public enum PlayerFaceDirection { Front, Back, Left, Right }
 
 public abstract class IsometricController : MonoBehaviour
 {
-
-
-
     protected Animator animator;
     protected BoxCollider2D boxCollider = null;
     protected Rigidbody2D rb2D = null;
@@ -25,6 +22,7 @@ public abstract class IsometricController : MonoBehaviour
 
     public AudioClip useClip;
     public GameObject audioPrefab;
+
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
@@ -34,36 +32,8 @@ public abstract class IsometricController : MonoBehaviour
 
     protected virtual void Update()
     {
-
-
-        //Debug.Log(faceDir.ToString());
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (DetectInteraction() && useClip != null)
-            {
-                GameObject audio = Instantiate(audioPrefab);
-                AudioSource aux;
-                aux = audio.GetComponent<AudioSource>();
-                aux.clip = useClip;
-                aux.Play();
-                Destroy(audio, 1f);
-            }
-        }
         animator.SetInteger("Facing", (int)faceDir);
         animator.SetFloat("Speed", rb2D.velocity.sqrMagnitude);
-    }
-
-    protected virtual bool DetectInteraction()
-    {
-        colliders = Physics2D.OverlapCircleAll(transform.position, 1000);
-        bool ret = false;
-        foreach (Collider2D collider in colliders)
-        {
-            // Here interactions without keys (or not ?)
-            // => Maybe doing this function on the other object
-        }
-        return ret;
-
     }
 
     // Actions performed when Space is pressed
@@ -80,7 +50,8 @@ public abstract class IsometricController : MonoBehaviour
 
     public virtual void Move(float h, float v)
     {
-
+        if (!rb2D)
+            return;
         Vector2 moveVector = new Vector2(h, v);
         if (moveVector.SqrMagnitude() > 0.01)
             if (moveVector.y * moveVector.y >= moveVector.x * moveVector.x)
