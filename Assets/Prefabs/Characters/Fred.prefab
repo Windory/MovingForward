@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 212409325461289108}
   - component: {fileID: 8176060726299406257}
   - component: {fileID: 50443469549169980}
-  - component: {fileID: 6456532224632599027}
   - component: {fileID: 5958915113387483294}
   - component: {fileID: 4902636885771426942}
   - component: {fileID: 272641654717937744}
@@ -117,7 +116,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 500
   m_LinearDrag: 0
   m_AngularDrag: 1000000
   m_GravityScale: 0
@@ -126,37 +125,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &6456532224632599027
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981488545428318}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.17999999, y: 0.32}
-      - {x: -0.17999999, y: -0.06}
-      - {x: -0.14999999, y: -0.22999999}
-      - {x: -0.13, y: -0.32}
-      - {x: 0.16, y: -0.32}
-      - {x: 0.16, y: 0.32}
 --- !u!114 &5958915113387483294
 MonoBehaviour:
   m_ObjectHideFlags: 0
