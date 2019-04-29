@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Collider2D))]
+
 public class DangerousTerrain : MonoBehaviour
 {
-
-    public virtual void  OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        IsometricController ic= other.GetComponent<IsometricController>();
-        if (ic != null&& ic as DapneController ==null)
+        if (other.collider.tag == "Daphne")
         {
-            other.GetComponent<CharacterSwapping>().Kill() ;
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
         }
     }
 }

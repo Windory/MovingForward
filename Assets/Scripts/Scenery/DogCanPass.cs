@@ -1,29 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Collider2D))]
+
 public class DogCanPass : MonoBehaviour
 {
-
-    private Collider2D c;
-
-    private void Awake()
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        c = this.GetComponent<BoxCollider2D>();
-    }
-
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.CompareTag("Dog"))
+        if (other.collider.tag == "Dog")
         {
-            Debug.Log(collision.gameObject.tag);
-            Physics2D.IgnoreCollision(c, collision.collider);
-            
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
         }
-
     }
-
-
 }

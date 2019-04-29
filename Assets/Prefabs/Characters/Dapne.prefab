@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7457122314102668726}
   - component: {fileID: 5524670839666009699}
   - component: {fileID: 8116826490093102305}
-  - component: {fileID: 4771159450340364057}
   - component: {fileID: 5011064981811715700}
   - component: {fileID: 748707276345280037}
   m_Layer: 11
@@ -114,7 +113,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981488545428318}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -201,21 +200,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4009415, y: 0.16044426}
   m_EdgeRadius: 0
---- !u!114 &4771159450340364057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981488545428318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae3b6348ac0407488672d97e1261a51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startCharacter: 1
-  walkSound: {fileID: 8300000, guid: e2b9cab6bfa6294429da249a6aa0c768, type: 3}
-  dieSound: {fileID: 8300000, guid: 68888e2172577d84191f6cf5f5f45bb7, type: 3}
 --- !u!82 &5011064981811715700
 AudioSource:
   m_ObjectHideFlags: 0

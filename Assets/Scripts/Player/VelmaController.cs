@@ -4,42 +4,17 @@ using UnityEngine;
 
 public class VelmaController : IsometricController
 {
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public override void Interact()
     {
-        if (collision.collider.CompareTag("HiddenPath"))
+        colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 0.05f);
+        foreach (Collider2D collider in colliders)
         {
-            Debug.Log("Sucess");
-            HiddenPath path = collision.collider.GetComponent<HiddenPath>();
-            if (path != null)
-            {
-            }
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("HiddenPath"))
-        {
-            Debug.Log("Sucess");
-            HiddenPath path = collision.collider.GetComponent<HiddenPath>();
-            if (path != null)
-            {
-                if (Input.GetKey(KeyCode.E))
-                    path.OpenPath();
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("HiddenPath"))
-        {
-            HiddenPath path = collision.collider.GetComponent<HiddenPath>();
-            if (path != null)
-            {
-
-            }
+            Interactable item = collider.GetComponent<Interactable>();
+            if (item != null)
+                item.Interact();
+            GlyphStone glyph = collider.GetComponent<GlyphStone>();
+            if (glyph != null)
+                glyph.Interact();
         }
     }
 }
