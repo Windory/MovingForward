@@ -149,7 +149,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 3664157343022684182, guid: f58ad06c403ca594380e690af64e7538,
         type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.13999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3664157343022684182, guid: f58ad06c403ca594380e690af64e7538,
         type: 3}
@@ -399,6 +399,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684184, guid: f58ad06c403ca594380e690af64e7538,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.13999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157343022684186, guid: f58ad06c403ca594380e690af64e7538,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.13999999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f58ad06c403ca594380e690af64e7538, type: 3}

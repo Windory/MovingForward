@@ -8,40 +8,45 @@ ScriptedImporter:
     100006: _MapPrfab/Level 2 Tiled/Murs sur les piques kk
     100008: _MapPrfab/Level 2 Tiled/Objets
     100010: _MapPrfab/Level 2 Tiled/Piqueolol
-    100012: _MapPrfab/Level 2 Tiled/Piques
+    100012: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous
     100014: _MapPrfab/Level 2 Tiled/Sols
+    100016: _MapPrfab/Level 2 Tiled/Sols poison
     400000: _MapPrfab/Level 2 Tiled/Transform
     400002: _MapPrfab/Level 2 Tiled/Murs/Transform
     400004: _MapPrfab/Level 2 Tiled/Murs du haut/Transform
     400006: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/Transform
     400008: _MapPrfab/Level 2 Tiled/Objets/Transform
     400010: _MapPrfab/Level 2 Tiled/Piqueolol/Transform
-    400012: _MapPrfab/Level 2 Tiled/Piques/Transform
+    400012: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/Transform
     400014: _MapPrfab/Level 2 Tiled/Sols/Transform
+    400016: _MapPrfab/Level 2 Tiled/Sols poison/Transform
     11400000: _MapPrfab/Level 2 Tiled/MonoBehaviour-SuperTiled2Unity.SuperMap
-    11400002: _MapPrfab/Level 2 Tiled/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400004: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400006: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400008: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400010: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400012: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400014: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400016: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400018: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400020: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400022: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400024: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400026: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400028: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400030: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400032: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400034: _MapPrfab/Level 2 Tiled/Piques/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400036: _MapPrfab/Level 2 Tiled/Piques/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400038: _MapPrfab/Level 2 Tiled/Piques/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400040: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
-    11400042: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
-    11400044: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.TilemapData
-    11400046: _superAsset
+    11400002: _superAsset
+    11400004: _MapPrfab/Level 2 Tiled/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400006: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400008: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400010: _MapPrfab/Level 2 Tiled/Murs/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400012: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400014: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400016: _MapPrfab/Level 2 Tiled/Murs du haut/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400018: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400020: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400022: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400024: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400026: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400028: _MapPrfab/Level 2 Tiled/Objets/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400030: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400032: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400034: _MapPrfab/Level 2 Tiled/Piqueolol/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400036: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400038: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400040: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400042: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400044: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400046: _MapPrfab/Level 2 Tiled/Sols/MonoBehaviour-SuperTiled2Unity.TilemapData
+    11400048: _MapPrfab/Level 2 Tiled/Sols poison/MonoBehaviour-SuperTiled2Unity.SuperTileLayer
+    11400050: _MapPrfab/Level 2 Tiled/Sols poison/MonoBehaviour-SuperTiled2Unity.SuperCustomProperties
+    11400052: _MapPrfab/Level 2 Tiled/Sols poison/MonoBehaviour-SuperTiled2Unity.TilemapData
     100100000: _MapPrfab
     2569400265252428796: _MapPrfab/Level 2 Tiled/Grid
     3664157343022684176: _MapPrfab/Level 2 Tiled/Murs/TilemapRenderer
@@ -49,15 +54,17 @@ ScriptedImporter:
     3664157343022684180: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/TilemapRenderer
     3664157343022684182: _MapPrfab/Level 2 Tiled/Objets/TilemapRenderer
     3664157343022684184: _MapPrfab/Level 2 Tiled/Piqueolol/TilemapRenderer
-    3664157343022684186: _MapPrfab/Level 2 Tiled/Piques/TilemapRenderer
+    3664157343022684186: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/TilemapRenderer
     3664157343022684188: _MapPrfab/Level 2 Tiled/Sols/TilemapRenderer
+    3664157343022684190: _MapPrfab/Level 2 Tiled/Sols poison/TilemapRenderer
     8195094279510102542: _MapPrfab/Level 2 Tiled/Murs/Tilemap
     8195094279510102544: _MapPrfab/Level 2 Tiled/Murs du haut/Tilemap
     8195094279510102546: _MapPrfab/Level 2 Tiled/Murs sur les piques kk/Tilemap
     8195094279510102548: _MapPrfab/Level 2 Tiled/Objets/Tilemap
     8195094279510102550: _MapPrfab/Level 2 Tiled/Piqueolol/Tilemap
-    8195094279510102552: _MapPrfab/Level 2 Tiled/Piques/Tilemap
+    8195094279510102552: _MapPrfab/Level 2 Tiled/Piques, interrupteurs, trous/Tilemap
     8195094279510102554: _MapPrfab/Level 2 Tiled/Sols/Tilemap
+    8195094279510102556: _MapPrfab/Level 2 Tiled/Sols poison/Tilemap
   externalObjects: {}
   userData: 
   assetBundleName: 
