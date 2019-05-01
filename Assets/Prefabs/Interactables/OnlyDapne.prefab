@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6377787331963673269}
   - component: {fileID: 6377787331963673268}
   - component: {fileID: 6377787331963673271}
-  - component: {fileID: 6377787331963673270}
   - component: {fileID: 6377787331963673274}
+  - component: {fileID: 4257046126390733734}
   m_Layer: 0
   m_Name: OnlyDapne
   m_TagString: Untagged
@@ -103,8 +103,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6377787331963673270
-BoxCollider2D:
+--- !u!114 &6377787331963673274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377787331963673265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa5ceacacd0a2c438767a3a108cc045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &4257046126390733734
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,18 +138,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65, y: 0.32}
-  m_EdgeRadius: 0
---- !u!114 &6377787331963673274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6377787331963673265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa5ceacacd0a2c438767a3a108cc045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+    m_Paths:
+    - - {x: -0.038713537, y: 0.15392089}
+      - {x: -0.30175442, y: 0.0056832633}
+      - {x: -0.3078363, y: -0.0056831837}
+      - {x: -0.028772354, y: -0.15392081}
+      - {x: 0.027427038, y: -0.15392081}
+      - {x: 0.31695923, y: -0.008326928}
+      - {x: 0.3139182, y: 0.011762461}
+      - {x: 0.020468157, y: 0.15392081}
