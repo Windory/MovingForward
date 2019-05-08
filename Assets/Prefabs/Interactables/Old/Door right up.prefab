@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4118928689852694442}
   - component: {fileID: 1216616800558706681}
   - component: {fileID: 4118928689852694440}
-  - component: {fileID: 4118928689852694423}
   - component: {fileID: 4118928689852694422}
   m_Layer: 0
-  m_Name: Door left up
+  m_Name: Door right up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300030, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
+  m_Sprite: {fileID: 21300002, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,32 +102,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4118928689852694423
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4118928689852694421}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.32}
-    newSize: {x: 2, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.65, y: 0.32}
-  m_EdgeRadius: 0
 --- !u!114 &4118928689852694422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9afd57a6576f8499ab1c05ab6f2d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteOpened: {fileID: 21300028, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
-  spriteClosed: {fileID: 21300030, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
+  spriteOpened: {fileID: 21300032, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
+  spriteClosed: {fileID: 21300008, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   opened: 0
