@@ -88,8 +88,8 @@ public abstract class IsometricController : MonoBehaviour
     {
         Vector2 ret = new Vector2
         {
-            x = cartesianCoord.x - cartesianCoord.y,
-            y = (cartesianCoord.x + cartesianCoord.y) / 2
+            x = cartesianCoord.x,
+            y = cartesianCoord.y
         };
         return ret;
     }
