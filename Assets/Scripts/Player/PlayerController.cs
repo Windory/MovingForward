@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
                 characters[i].gameObject.SetActive(true);
             }
             charactersEnd.Clear();
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
