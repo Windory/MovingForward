@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Hole : MonoBehaviour
+public class Pit : MonoBehaviour
 {
+
     public Sprite spriteEmpty;
     public Sprite spriteBlocked;
 

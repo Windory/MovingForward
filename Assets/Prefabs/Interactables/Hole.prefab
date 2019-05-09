@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1543868046643061640}
   - component: {fileID: 1543868046643061647}
   - component: {fileID: 1543868046643061646}
-  - component: {fileID: 7860364286757085034}
   - component: {fileID: 436247664848597757}
   - component: {fileID: 7588054626465923675}
+  - component: {fileID: 8275125620172465827}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -104,20 +104,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7860364286757085034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543868046643061645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f193aff55f9e4f84ea7e5a2f17f9d299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteEmpty: {fileID: 21300082, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
-  spriteBlocked: {fileID: 21300040, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
 --- !u!60 &436247664848597757
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +152,17 @@ MonoBehaviour:
   spriteOpened: {fileID: 21300040, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   spriteClosed: {fileID: 21300082, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   opened: 0
+--- !u!114 &8275125620172465827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543868046643061645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2690a116ecc2b594499226314f0dafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteEmpty: {fileID: 21300082, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
+  spriteBlocked: {fileID: 21300040, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
