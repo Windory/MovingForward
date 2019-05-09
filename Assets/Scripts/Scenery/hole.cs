@@ -30,7 +30,6 @@ public class Hole : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Boulder tag : " + col.gameObject.tag);
         if (!blocked && col.gameObject.tag == "Boulder")
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col.collider);

@@ -8,9 +8,12 @@ public class Button : Interrupter
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (cpt == 0)
-            Pull();
-        ++cpt;
+        if (col && (col.gameObject.tag == "Boulder" || col.gameObject.tag == "Player"))
+        {
+            if (cpt == 0)
+                Pull();
+            ++cpt;
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
