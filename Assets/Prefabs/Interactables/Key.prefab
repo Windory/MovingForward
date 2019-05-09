@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6430893782426129175}
   - component: {fileID: 6430893782426129174}
   - component: {fileID: 6430893782426129161}
-  - component: {fileID: 6430893782426129160}
   - component: {fileID: 6430893782426129163}
+  - component: {fileID: 6354676718055860404}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -103,32 +103,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &6430893782426129160
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6430893782426129162}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.32, y: 0.16}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0.64, y: 0.32}
-    newSize: {x: 0.64, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.32}
-  m_EdgeRadius: 0
 --- !u!114 &6430893782426129163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +119,37 @@ MonoBehaviour:
   spriteOff: {fileID: 21300042, guid: 85e77210a92f85b459cb09e718c71dee, type: 3}
   ocList:
   - {fileID: 0}
+--- !u!60 &6354676718055860404
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430893782426129162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0.64, y: 0.32}
+    newSize: {x: 0.64, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.35, y: 0.29999998}
+      - {x: 0.28, y: 0.26999998}
+      - {x: 0.19, y: 0.099999994}
+      - {x: 0.19, y: 0.03}
+      - {x: 0.26999998, y: 0.03}
+      - {x: 0.32999998, y: 0.07}
+      - {x: 0.45, y: 0.16}
+      - {x: 0.45, y: 0.28}
+      - {x: 0.44, y: 0.29999998}

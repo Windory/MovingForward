@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7272987687029828426}
   - component: {fileID: 7272987687029828424}
   - component: {fileID: 7272987687029828425}
-  - component: {fileID: 7215074902182696129}
+  - component: {fileID: 6392592555058415734}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -96,8 +96,8 @@ MonoBehaviour:
   spriteOn: {fileID: 21300078, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   spriteOff: {fileID: 21300062, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   ocList: []
---- !u!61 &7215074902182696129
-BoxCollider2D:
+--- !u!60 &6392592555058415734
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,6 +119,13 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.32}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.038713537, y: 0.15392089}
+      - {x: -0.30175442, y: 0.0056832633}
+      - {x: -0.3078363, y: -0.0056831837}
+      - {x: -0.028772354, y: -0.15392081}
+      - {x: 0.027427038, y: -0.15392081}
+      - {x: 0.31695923, y: -0.008326928}
+      - {x: 0.3139182, y: 0.011762461}
+      - {x: 0.020468157, y: 0.15392081}
