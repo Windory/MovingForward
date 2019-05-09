@@ -5,10 +5,13 @@ public class Key : Interrupter
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!on)
+        if (col && col.gameObject.tag == "Player")
         {
-            Pull();
-            Destroy(gameObject);
+            if (!on)
+            {
+                Pull();
+                Destroy(gameObject);
+            }
         }
     }
 }
