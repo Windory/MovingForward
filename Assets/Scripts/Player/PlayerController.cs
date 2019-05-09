@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private List<IsometricController> characters = new List<IsometricController>(4); // List with all characters
     private List<IsometricController> charactersEnd = new List<IsometricController>(3); // List with the characters who reached the end
+    private List<IsometricController> charactersDead = new List<IsometricController>(3); // List with the dead characters
     private int cha = 0; // Current index of the characters list (active character)
     private float h, v = 0.0f;
     private static PlayerController instance;
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
         GetCharacters();
     }
 
-    private void GetCharacters()
+    public void GetCharacters()
     {
         string[] tags = { "Velma", "Fred", "Dapne", "Dog" };
         for (int i = 0; i < 4; ++i)
@@ -39,6 +40,15 @@ public class PlayerController : MonoBehaviour
         }
         GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
         characters[cha].Go();
+    }
+
+    public void ResetList()
+    {
+        foreach(IsometricController chara in charactersDead)
+        {
+            chara.gameObject.SetActive(true);
+            characters.Add(chara);
+        }
     }
 
     public static PlayerController GetInstance()
@@ -120,6 +130,7 @@ public class PlayerController : MonoBehaviour
 
         if (characters.Count == 1)
         {
+            charactersDead.Add(characters[0]);
             characters[0].gameObject.SetActive(false);
             characters.RemoveAt(0);
             for (int i = 0; i < charactersEnd.Count; ++i)
