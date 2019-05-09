@@ -8,7 +8,7 @@ public class Button : Interrupter
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col && (col.gameObject.tag == "Boulder" || col.gameObject.tag == "Player"))
+        if (col && (col.gameObject.tag == "Boulder" || col.gameObject.layer == 11))
         {
             if (cpt == 0)
                 Pull();
