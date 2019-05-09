@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1040a91d83478bf4eb5438eae489fb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   useClip: {fileID: 8300000, guid: 99ebdcc9e0b6d8a42b7235c5e1124060, type: 3}
   audioPrefab: {fileID: 7285715764608928778, guid: 0ba17a2ed6768594ca26a0abe660f153,
     type: 3}
@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22419453, y: 0.21231443}
+  m_Offset: {x: -0.22102737, y: 0.23764074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47317702, y: 0.2229594}
+  m_Size: {x: 0.5681921, y: 0.27361202}
   m_EdgeRadius: 0
 --- !u!82 &4443147761992320243
 AudioSource:

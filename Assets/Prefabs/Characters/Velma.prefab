@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769af5cc88b50dc47b2840e0fb062c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   useClip: {fileID: 8300000, guid: 993b7ebce372a0d49b64482906f2afb5, type: 3}
   audioPrefab: {fileID: 7285715764608928778, guid: 0ba17a2ed6768594ca26a0abe660f153,
     type: 3}
