@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 73cdf7e96128c0e4a98798605778860d, type: 3}
+  m_Sprite: {fileID: 21300022, guid: 73cdf7e96128c0e4a98798605778860d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteOpened: {fileID: 21300042, guid: 9bdd0e0f2ddbf6d43b333f906d234488, type: 3}
-  spriteClosed: {fileID: 21300006, guid: 73cdf7e96128c0e4a98798605778860d, type: 3}
+  spriteClosed: {fileID: 21300022, guid: 73cdf7e96128c0e4a98798605778860d, type: 3}
   opened: 0
 --- !u!60 &4421385525916339747
 PolygonCollider2D:

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 1195669817765268334}
   - component: {fileID: 7546486036025891745}
   - component: {fileID: 4145426237309200918}
+  - component: {fileID: 672069405229265813}
   m_Layer: 0
   m_Name: Door left up
   m_TagString: Untagged
@@ -268,6 +269,32 @@ MonoBehaviour:
   spriteOpened: {fileID: 21300028, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   spriteClosed: {fileID: 21300030, guid: d8883fdbf4b61e643a079aa1c7412d4d, type: 3}
   opened: 0
+--- !u!61 &672069405229265813
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4402427525755853610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015601823, y: -0.33789152}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.32}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.081802234, y: 0.08780801}
+  m_EdgeRadius: 0
 --- !u!1 &6566282417116253056
 GameObject:
   m_ObjectHideFlags: 0

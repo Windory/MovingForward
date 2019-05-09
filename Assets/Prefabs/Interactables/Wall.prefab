@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2486327908475399860}
   - component: {fileID: 2486327908475399818}
   - component: {fileID: 2486327908475399819}
+  - component: {fileID: 5605028071013580623}
   m_Layer: 0
   m_Name: Wall up
   m_TagString: Untagged
@@ -101,6 +102,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &5605028071013580623
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2486327908475399861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015601823, y: -0.33789152}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.32}
+    newSize: {x: 2, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.081802234, y: 0.08780801}
+  m_EdgeRadius: 0
 --- !u!1 &2486327908801021713
 GameObject:
   m_ObjectHideFlags: 0
