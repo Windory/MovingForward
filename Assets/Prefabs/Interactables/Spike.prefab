@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7146629140843322126}
   - component: {fileID: 7146629141158394504}
-  - component: {fileID: 7146629141158394507}
   - component: {fileID: 7146629140570473648}
+  - component: {fileID: 4421385525916339747}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -81,32 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7146629141158394507
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7146629141158394506}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &7146629140570473648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +96,36 @@ MonoBehaviour:
   spriteOpened: {fileID: 21300042, guid: 9bdd0e0f2ddbf6d43b333f906d234488, type: 3}
   spriteClosed: {fileID: 21300006, guid: 73cdf7e96128c0e4a98798605778860d, type: 3}
   opened: 0
+--- !u!60 &4421385525916339747
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7146629141158394506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.017099805, y: -0.00022736192}
+      - {x: -0.9963619, y: -0.46558008}
+      - {x: -0.99524593, y: -0.51651835}
+      - {x: -0.043168366, y: -0.9885246}
+      - {x: 0.05981811, y: -0.98852456}
+      - {x: 0.99357176, y: -0.52275944}
+      - {x: 1.0013276, y: -0.4810855}
+      - {x: 0.056442488, y: -0.00382483}
