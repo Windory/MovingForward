@@ -106,7 +106,8 @@ public class GameManager : MonoBehaviour {
 
         Vector3 aux;
         Vector3 aux2;
-        if (cameraFollow != null)
+        string name = SceneManager.GetActiveScene().name;
+        if (cameraFollow != null && name != "Start" && name != "End")
         {
             aux = cameraFollow.position;
             aux.z = mainCamera.position.z;

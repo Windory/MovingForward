@@ -39,7 +39,7 @@ public abstract class IsometricController : MonoBehaviour
     // Actions performed when Space is pressed
     public virtual void Interact()
     {
-        colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 0.05f);
+        colliders = Physics2D.OverlapCircleAll(transform.position, boxCollider.size.x / 2 + 1f);
         foreach (Collider2D collider in colliders)
         {
             Interactable item = collider.GetComponent<Interactable>();
@@ -86,9 +86,11 @@ public abstract class IsometricController : MonoBehaviour
 
     public static Vector2 CarToIso(Vector2 cartesianCoord)
     {
-        Vector2 ret = new Vector2();
-        ret.x = cartesianCoord.x - cartesianCoord.y;
-        ret.y = (cartesianCoord.x + cartesianCoord.y) / 2;
+        Vector2 ret = new Vector2
+        {
+            x = cartesianCoord.x - cartesianCoord.y,
+            y = (cartesianCoord.x + cartesianCoord.y) / 2
+        };
         return ret;
     }
 }
