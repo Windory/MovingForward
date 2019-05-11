@@ -31,5 +31,10 @@ public abstract class Interrupter : MonoBehaviour
             sr.sprite = spriteOn;
         else
             sr.sprite = spriteOff;
+        AudioSource audio = gameObject.GetComponent<AudioSource>();
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 }

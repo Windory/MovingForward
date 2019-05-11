@@ -24,6 +24,11 @@ public class Pit : MonoBehaviour
             if (col && col.gameObject.tag == "Boulder")
             {
                 Block(col.gameObject);
+                AudioSource audio = gameObject.GetComponent<AudioSource>();
+                if (audio)
+                {
+                    audio.Play();
+                }
             }
         }
     }

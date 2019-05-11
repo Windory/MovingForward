@@ -81,10 +81,20 @@ public class PlayerController : MonoBehaviour
             cha = 0;
         GameManager.getInstance().CameraFollowObject(characters[cha].gameObject);
         characters[cha].Go();
+        AudioSource audio = characters[cha].gameObject.GetComponent<AudioSource>();
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 
     private void Retry()
     {
+        AudioSource audio = gameObject.GetComponent<AudioSource>();
+        if (audio)
+        {
+            audio.Play();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

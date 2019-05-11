@@ -24,6 +24,11 @@ public class OpenedClosed : MonoBehaviour
     {
         opened = !opened;
         StateUpdate();
+        AudioSource audio = gameObject.GetComponent<AudioSource>();
+        if (audio)
+        {
+            audio.Play();
+        }
     }
 
     public void StateUpdate()
